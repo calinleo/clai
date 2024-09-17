@@ -67,12 +67,6 @@
     </nav>
     <header class="masthead bg-primary text-white text-center">
       <div class="container d-flex align-items-center flex-column">
-        <!-- <img
-          class="masthead-avatar mb-5"
-          src="assets/img/avataaars.svg"
-          alt=""
-        /> -->
-
         <h1 class="masthead-subheading font-weight-bold mb-0">
           AI Enthusiast &nbsp;&nbsp;|&nbsp;&nbsp; Front End Developer
           &nbsp;&nbsp;|&nbsp;&nbsp; UI/UX Designer &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -224,7 +218,7 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/5sec.png"
+                src="assets/img/portfolio/dbs.png"
                 alt="5 Sec Quote Landing Page"
               />
             </div>
@@ -246,8 +240,8 @@
               </div>
               <img
                 class="img-fluid"
-                src="assets/img/portfolio/renters.png"
-                alt="Renters Insurance"
+                src="assets/img/portfolio/css_layout.png"
+                alt="CSS Layout"
               />
             </div>
           </div>
@@ -266,11 +260,8 @@
                   <i class="fas fa-plus fa-3x"></i>
                 </div>
               </div>
-              <img
-                class="img-fluid"
-                src="assets/img/portfolio/uxDesign.png"
-                alt="UX Design"
-              />
+              
+              <img class="img-fluid" src="/assets/img/portfolio/AI_Generated_Futuristic.jpeg" alt="Futuristic City">
             </div>
           </div>
         </div>
@@ -538,12 +529,13 @@
           >
             <span aria-hidden="true"><i class="fas fa-times"></i></span>
           </button>
+
           <div class="modal-body text-center">
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <h2 class="portfolio-modal-title text-secondary mb-0">
-                    5 Sec Quote Landing Page
+                    Database SQL Query
                   </h2>
 
                   <div class="divider-custom">
@@ -554,21 +546,46 @@
                     <div class="divider-custom-line"></div>
                   </div>
 
-                  <img
-                    class="img-fluid rounded mb-2"
-                    src="assets/img/portfolio/5sec.png"
-                    alt="5 Sec Quote Landing Page"
-                  />
-                  <p class="mt-1">
-                    <a
-                      href="https://insure.plymouthrock.com/home-insurance-by-plymouth-rock"
-                      target="_blank"
-                      >Live Link</a
-                    >
-                  </p>
-                  <p class="mb-5">
-                    5 Sec Quote Landing Page - created for Marketing
-                  </p>
+                  <div class="row"></div>
+                    <div class="font-weight-bold text-left">
+                      Problem:
+                    </div>
+                    <div class="text-left">
+                      A database administrator needs to retrieve data about customers who have placed more than 5 orders from an e-commerce database. The database has two tables: customers and orders. The customers table contains customer information, and the orders table stores individual order records with a foreign key that links to the customers table. The admin isn't sure how to write the SQL query to find customers with more than 5 orders.
+                    </div>
+                    <div class="font-weight-bold text-left mt-5">
+                      Solution:
+                    </div>
+                    <div class="text-left">
+                      To solve this, the administrator can use SQL with the JOIN, GROUP BY, and HAVING clauses to group the orders by customer and filter those with more than 5 orders.
+                    </div>
+                    <div class="font-weight-bold text-left mt-3">
+                      1. Table Structure:
+                    </div>
+                    <div class="text-left">
+                      <ul><li><p><code>customers</code> table:</p><ul><li><code>customer_id</code> (Primary Key)</li><li><code>name</code></li><li><code>email</code></li></ul></li><li><p><code>orders</code> table:</p><ul><li><code>order_id</code> (Primary Key)</li><li><code>customer_id</code> (Foreign Key)</li><li><code>order_date</code></li><li><code>amount</code></li></ul></li></ul>
+                    </div>
+
+                    <div class="font-weight-bold text-left mt-3">
+                      2. SQL Query:
+                    </div>
+                    <div>
+                      <img class="img-fluid" src="/assets/img/portfolio/sql.png" alt="SQL Query">
+                    </div>
+                    <div class="text-left mt-1">
+                      This query will return a list of customers who have made more than 5 orders, along with their details and the total number of orders placed.
+                    </div>
+                    <div class="font-weight-bold text-left mt-3">
+                      3. Explanation:
+                    </div>
+                    <div class="text-left">
+                      <ul><li><strong>JOIN</strong>: The query uses an <code>INNER JOIN</code> to combine the <code>customers</code> and <code>orders</code> tables, linking them via the <code>customer_id</code> field.</li><li><strong>GROUP BY</strong>: The <code>GROUP BY</code> clause groups the results by each customer (<code>c.customer_id, c.name, c.email</code>), so the query can count the number of orders for each customer.</li><li><strong>HAVING</strong>: The <code>HAVING</code> clause filters out groups with fewer than or equal to 5 orders, only returning customers with more than 5 orders.</li><li><strong>COUNT()</strong>: The <code>COUNT(o.order_id)</code> function counts the number of orders each customer has placed.</li></ul>
+                    </div>
+                    
+                  </div>
+                  </div>
+
+
                   <button class="btn btn-primary" href="#" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>Close Window
                   </button>
@@ -602,7 +619,7 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <h2 class="portfolio-modal-title text-secondary mb-0">
-                    Renters Insurance and Other WordPress Pages
+                    CSS Layout
                   </h2>
 
                   <div class="divider-custom">
@@ -613,78 +630,47 @@
                     <div class="divider-custom-line"></div>
                   </div>
 
-                  <img
-                    class="img-fluid rounded mb-2"
-                    src="assets/img/portfolio/renters.png"
-                    alt="WordPress Pages"
-                  />
-                  <p class="mt-1">
-                    <a
-                      href="https://www.plymouthrock.com/insurance/renters"
-                      target="_blank"
-                      >Renters Insurance Page</a
-                    >
-                  </p>
-                  <p class="mb-1">
-                    Renters Insurance WordPress Page and other WordPress pages
-                    using Custom Post Types:
-                  </p>
-                  <p class="mt-1">
-                    <a
-                      href="https://www.plymouthrock.com/insurance/condo"
-                      target="_blank"
-                      >Condo Page</a
-                    >
-                  </p>
-                  <p class="mt-1">
-                    <a
-                      href="https://www.plymouthrock.com/insurance/home/coverage-policy-options"
-                      target="_blank"
-                      >Coverage Policy Options Page</a
-                    >
-                  </p>
-                  <p class="mt-1">
-                    <a
-                      href="https://www.plymouthrock.com/insurance/home/coverage-policy-options/home-systems-breakdown"
-                      target="_blank"
-                      >Home System Page</a
-                    >
-                  </p>
-                  <p class="mt-1">
-                    <a
-                      href="https://www.plymouthrock.com/insurance/flood"
-                      target="_blank"
-                      >Flood Page</a
-                    >
-                  </p>
-                  <p class="mt-1">
-                    <a
-                      href="https://www.plymouthrock.com/insurance/pets"
-                      target="_blank"
-                      >Pet Insurance Page</a
-                    >
-                  </p>
-                  <p class="mt-1">
-                    <a
-                      href="https://www.plymouthrock.com/insurance/home/coverage-policy-options/identity-theft-monitoring"
-                      target="_blank"
-                      >Identity Theft Insurance Page</a
-                    >
-                  </p>
-                  <p class="mt-1">
-                    <a
-                      href="https://www.plymouthrock.com/insurance/home/coverage-policy-options/home-cyber"
-                      target="_blank"
-                      >Home Cyber Page</a
-                    >
-                  </p>
-                  <p class="mt-1">
-                    <a
-                      href="https://www.plymouthrock.com/insurance/home/coverage-policy-options/utility-service-line"
-                      target="_blank"
-                      >Utility Service Insurance Page</a
-                    >
-                  </p>
+
+
+
+                  <div class="row">
+                    <div class="font-weight-bold text-left">
+                      Problem:
+                    </div>
+                    <div class="text-left">
+                      A developer is trying to build a responsive webpage with a grid layout that adapts to different screen sizes. The goal is to have a grid of product cards that displays 4 cards per row on large screens, 2 cards per row on medium screens, and 1 card per row on small screens. The developer isn't sure how to use CSS Grid and media queries to achieve this responsiveness.
+                    </div>
+                    <div class="font-weight-bold text-left mt-5">
+                      Solution:
+                    </div>
+                    <div class="text-left">
+                      The problem can be solved using a combination of CSS Grid for layout and media queries to adjust the grid based on screen size.
+                    </div>
+                    <div class="font-weight-bold text-left mt-3">
+                      1. HTML Structure:
+                    </div>
+                    <div>
+                      <img class="img-fluid" src="/assets/img/portfolio/html_layout.png" alt="HTML Layout">
+                    </div>
+                    <div class="font-weight-bold text-left mt-3">
+                      2. CSS for Grid Layout:
+                    </div>
+                    <div>
+                      <img class="img-fluid" src="/assets/img/portfolio/css_grid_layout.png" alt="CSS Grid Layout">
+                    </div>
+                    <div class="font-weight-bold text-left mt-3">
+                      3. Explanation:
+                    </div>
+                    <div class="text-left">
+                      <ul><li><strong>Grid Layout</strong>: The <code>.product-grid</code> class uses 
+                        <code>grid-template-columns: repeat(4, 1fr);</code> 
+                        to create a grid with 4 equal-width columns, meaning 4 product cards per row.</li>
+                        <li><strong>Media Queries</strong>: Two media queries adjust the grid:
+                          <ul><li>For screens smaller than 1024px (<code>max-width: 1024px</code>), the layout switches to 2 cards per row using <code>grid-template-columns: repeat(2, 1fr);</code>.</li><li>For screens smaller than 600px (<code>max-width: 600px</code>), the layout changes to 1 card per row with <code>grid-template-columns: 1fr;</code>.</li></ul></li></ul>
+                    </div>
+                    
+                  
+                  </div>
 
                   <button class="btn btn-primary" href="#" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>Close Window
@@ -719,7 +705,7 @@
               <div class="row justify-content-center">
                 <div class="col-lg-8">
                   <h2 class="portfolio-modal-title text-secondary mb-0">
-                    UI/UX Design
+                    Image generation
                   </h2>
 
                   <div class="divider-custom">
@@ -729,36 +715,50 @@
                     </div>
                     <div class="divider-custom-line"></div>
                   </div>
+                  <div class="row">
+                    <div class="font-weight-bold text-left">
+                      Problem:
+                    </div>
+                    <div class="text-left">
+                      A user wants to generate a unique image of a futuristic
+                      city at night, filled with neon lights, flying cars, and
+                      towering skyscrapers. They also want a cyberpunk
+                      aesthetic, but they don't know how to prompt an AI to
+                      create this image. They are unsure of the level of detail
+                      required and how to describe the visual elements they have
+                      in mind.
+                    </div>
+                    <div class="font-weight-bold text-left mt-5">
+                      Solution:
+                    </div>
+                    <div class="text-left">
+                      The key to solving this problem is creating a detailed and
+                      descriptive prompt that allows the AI to capture the
+                      essence of the scene. Here’s an example of how to
+                      construct an effective prompt.
+                    </div>
+                    <div class="font-weight-bold text-left mt-5">
+                      Prompt:
+                    </div>
+                    <div class="text-left">
+                      "Create an image of a futuristic city at night. 
+                      The scene should have a cyberpunk aesthetic with vibrant neon lights 
+                      illuminating the city. Include towering skyscrapers with glowing 
+                      advertisements and billboards. Flying cars should be seen zipping 
+                      through the air. The streets below should be filled with people in 
+                      futuristic attire and robots, with a dark, rainy atmosphere reflecting 
+                      the neon glow. The overall vibe should feel technologically advanced, 
+                      bustling, and slightly dystopian."
+                    </div>
+                    <div class="mt-4">
+                      <img class="img-fluid" src="/assets/img/portfolio/AI_Generated_Futuristic.jpeg">
+                    </div>
 
-                  <div>
-                    Original Design
-                    <img
-                      class="img-fluid rounded mb-5"
-                      src="assets/img/portfolio/design0.png"
-                      alt="Original Design"
-                    />
                   </div>
-                  <div>
-                    New Design mock-ups
-                    <p class="mb-5">
-                      The new designs has a fresh look, keeps the PR color
-                      scheme and new icons
-                    </p>
-
-                    <img
-                      class="img-fluid rounded mb-5"
-                      src="assets/img/portfolio/design1.png"
-                      alt="Original Design"
-                    />
-
-                    <img
-                      class="img-fluid rounded mb-5"
-                      src="assets/img/portfolio/design2.png"
-                      alt="Original Design"
-                    />
+                  </div>
                   </div>
 
-                  <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <button class="btn btn-primary mt-5" href="#" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>Close Window
                   </button>
                 </div>
